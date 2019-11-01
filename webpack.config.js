@@ -2,21 +2,23 @@ const path = require('path')
 const dotenv = require('dotenv')
 const MiniCss_WP = require('mini-css-extract-plugin')
 const HTML_WP = require('html-webpack-plugin')
-dotenv.config();
+dotenv.config()
 
-const { NODE_ENV,
-        PORT } = process.env
+const {
+  NODE_ENV,
+  PORT
+} = process.env
 
 const isDev = NODE_ENV === 'development'
 const isProd = NODE_ENV === 'production'
 
-module.exports= {
-
+module.exports = {
 
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name].bundle.js'
+    filename: '[name].bundle.js',
+    publicPath: '/dist/'
   },
   module: {
     rules: [
@@ -29,12 +31,33 @@ module.exports= {
               hmr: isDev
             }
           },
-          'sass-loader'
+          {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 2,
+              sourceMap: true
+            }
+          },
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: true
+            }
+          }
         ]
       },
       {
         test: /\.(js|jsx)$/,
-        use: 'babel-loader'
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: [
+              '@babel/preset-env',
+              '@babel/preset-react'
+            ]
+          }
+        }
       }
     ]
   },
@@ -44,6 +67,8 @@ module.exports= {
     historyApiFallback: true,
     port: PORT || 9000,
     hot: true,
+    index: 'src/index.html',
+    open: true
 
   },
   plugins: [
@@ -53,7 +78,7 @@ module.exports= {
       ignoreOrder: false
     }),
     new HTML_WP({
-      template: './src/index.html'
+      template: path.resolve(__dirname, 'src/index.html')
     })
   ]
-};
+}
