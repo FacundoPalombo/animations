@@ -9,14 +9,14 @@ export const App = () => {
   return (
     <section>
       <div className='container'>
-        <div className='margined container'>
-          <div className='container green'>
+        <div className='perspective container'>
+          <div className='container border-green'>
             <Circle />
           </div>
-          <div className='container red'>
+          <div className='container border-red hov'>
             <Rectangle />
           </div>
-          <div className='container yellow hov'>
+          <div className='container border-yellow hov'>
             <Square />
           </div>
         </div>

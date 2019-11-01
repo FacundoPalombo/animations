@@ -6,29 +6,10 @@
   display: flex;
   justify-items: center;
   align-content: center;
-  transition: 300ms;
   margin: auto;
 
 }
 
 .square:hover {
   transform: rotate(30deg);
-}
-
-.line {
-  height: 1px;
-  background-color: black;
-  display: flex;
-  flex-direction: column;
-  justify-self: center;
-  align-self: center;
-  width: 100%;
-}
-
-.a {
-  transform: rotate(45deg);
-}
-
-.b{
-  transform: rotate(-90deg);
 }
