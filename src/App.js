@@ -1,38 +1,26 @@
 import React from 'react'
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import './styles.css'
-import Circle from './components/Formas/Circle'
-import Rectangle from './components/Formas/Rectangle'
-import Square from './components/Formas/Square'
 import './App.scss'
-import { Animated } from './components/Formas/Animated'
+import { Home } from './pages/home'
+import { Standard } from './pages/standard'
+import { JsApi } from './pages/jsapi'
 
 export const App = () => {
   return (
-    <section>
-      <div className='container'>
-        <div className='perspective container'>
-          <div className='container border-green hov'>
-            <Circle className='scale'/>
-          </div>
-          <div className='container border-red hov'>
-            <Rectangle className='translate'/>
-          </div>
-          <div className='container border-yellow hov'>
-            <Square className='transform'/>
-          </div>
-          <div className='container border-lightblue hov'>
-            <Square className='skew'/>
-          </div>
-          <Animated animated animation='disband'>
-            <Square />
-          </Animated>
-          <div className='container big border-lightred'>
-            <Animated animated animation='move'>
-              <Circle />
-            </Animated>
-          </div>
-        </div>
-      </div>
-    </section>
+    <BrowserRouter>
+      <Switch>
+        <Route path='/standard'>
+          <Standard />
+        </Route>
+        <Route path='/jsapi'>
+          <JsApi />
+        </Route>
+        <Route default>
+          <Home />
+        </Route>
+      </Switch>
+
+    </BrowserRouter>
   )
 }

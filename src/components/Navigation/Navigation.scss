@@ -1,0 +1,22 @@
+.nav {
+  display: grid;
+  width: 100%;
+  height: 112px;
+  position: absolute;
+  top: 0;
+  grid-template-columns: 1fr 33%;
+  grid-template-areas: ". content";
+  & ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    grid-gap: 5px;
+    grid-area: content;
+  }
+  * {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+}
