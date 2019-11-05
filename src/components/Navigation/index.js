@@ -6,6 +6,9 @@ export const Navigation = () => {
     <nav className='nav'>
       <ul>
         <li>
+          <NavLink to='/dashboard'>Dashboard</NavLink>
+        </li>
+        <li>
           <NavLink to='/standard'>Standard CSS animation section</NavLink>
         </li>
         <li>

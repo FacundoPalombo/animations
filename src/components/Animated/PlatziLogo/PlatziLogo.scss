@@ -1,0 +1,31 @@
+@mixin platziLogoLayout($height) {
+  width: 100%;
+  height: $height;
+  border: 20px solid #97c93e;
+
+}
+
+.platzi {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  margin: 40px auto;
+  background: #234050;
+  transform: rotate(45deg);
+  & * {
+    box-sizing: border-box;
+  }
+  &__left {
+    @include platziLogoLayout(65%);
+    width: 80%;
+    border-bottom: none;
+    position: relative;
+    top: 1px;
+    border-radius: 20px 20px 0 0;
+  }
+  &__right {
+    @include platziLogoLayout(35%);
+    border-radius: 0 0 20px 20px;
+    border-top: none;
+  }
+}

@@ -1,18 +1,18 @@
 .nav {
-  display: grid;
+  display: block;
   width: 100%;
   height: 112px;
   position: absolute;
   top: 0;
-  grid-template-columns: 1fr 33%;
-  grid-template-areas: ". content";
-  & ul {
+  ul {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    justify-items: center;
-    grid-gap: 5px;
-    grid-area: content;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+    &>li>a {
+      box-sizing: border-box;
+      width: 100%;
+      height: 100%;
+    }
   }
   * {
     list-style: none;

@@ -1,0 +1,32 @@
+#btn{
+  &__play{
+    background: #abfe2d;
+  }
+  &__pause {
+    background: #f5f5f5;
+  }
+  &__stop {
+    background: #dc143c;
+  }
+  &__reverse {
+    background: #812dfe;
+  }
+}
+
+button {
+  border: none;
+}
+
+.btn {
+  border-radius: 8px;
+  padding: 1% 5%;
+  margin: 3px;
+  cursor: pointer;
+  box-shadow: inset 0 -.1em rgba(0,0,0,.2);
+  outline: 0;
+  transition: 200ms;
+}
+.btn:active {
+  box-shadow: inset 0 .05em rgba(0,0,0,.2);
+  transform: scale(.9)
+}
