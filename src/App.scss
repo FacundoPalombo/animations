@@ -14,18 +14,43 @@
   perspective-origin: right;
 }
 
+.border{
+  &-green {
+    border: 1px solid green;
+  }
+  &-red {
+    border: 1px solid red;
+  }
+  &-yellow {
+    border: 1px solid yellow;
+  }
+  &-lightblue {
+    border: 1px solid lightblue;
+  }
+}
+
+
 .hov > *{
   transition: 300ms;
 }
 
-.hov:hover .square {
+.hov:hover .transform {
   /* transform: rotateX(-30deg);
   transform: rotateY(-20deg);
   transform: rotateZ(30deg); */
   transform: rotateX(-30deg) rotateY(-20deg) rotateZ(30deg);
 /*   transform: rotate3d(1, 1, 1, 45deg); */
-} 
-.hov:hover .rectangle {
-  transform: translateZ(100px);
+}
+
+.hov:hover .translate {
   transform: translateY(100px);
+  transform: translateZ(100px);
+}
+
+.hov:hover .scale {
+  transform: scale(.7, .9);
+}
+
+.hov:hover .skew {
+  transform: skew(30deg, 20deg);
 }

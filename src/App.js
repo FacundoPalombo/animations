@@ -10,14 +10,17 @@ export const App = () => {
     <section>
       <div className='container'>
         <div className='perspective container'>
-          <div className='container border-green'>
-            <Circle />
+          <div className='container border-green hov'>
+            <Circle className='scale'/>
           </div>
           <div className='container border-red hov'>
-            <Rectangle />
+            <Rectangle className='translate'/>
           </div>
           <div className='container border-yellow hov'>
-            <Square />
+            <Square className='transform'/>
+          </div>
+          <div className='container border-lightblue hov'>
+            <Square className='skew'/>
           </div>
         </div>
       </div>
