@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import Circle from '../components/Formas/Circle'
 import Rectangle from '../components/Formas/Rectangle'
 import Square from '../components/Formas/Square'
-import { Animated } from '../components/Formas/Animated'
+import { Animated } from '../components/Animated/Animated'
 
 export const Standard = () => {
   return (
