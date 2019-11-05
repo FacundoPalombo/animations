@@ -12,7 +12,7 @@ export const Animated = ({
   }
   return (
     animated
-      ? <div className={`animated${animation ? '-' + animation : ''}${className || ''}`}>
+      ? <div className={`animated${animation ? ` animated-${animation}` : ''}${className || ''}`}>
         {children}
       </div>
       : <>{children}</>

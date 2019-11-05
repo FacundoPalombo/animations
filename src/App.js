@@ -26,6 +26,11 @@ export const App = () => {
           <Animated animated animation='disband'>
             <Square />
           </Animated>
+          <div className='container big border-lightred'>
+            <Animated animated animation='move'>
+              <Circle />
+            </Animated>
+          </div>
         </div>
       </div>
     </section>

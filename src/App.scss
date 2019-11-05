@@ -2,7 +2,14 @@
   box-sizing: content-box;
   width: 300px;
   margin: auto;
+  
 }
+
+.big {
+  width: 100%;
+  height: 300px;
+}
+
 .perspective {
   margin: 20px;
   box-sizing: border-box;
@@ -26,6 +33,9 @@
   }
   &-lightblue {
     border: 1px solid lightblue;
+  }
+  &-lightred {
+    border: 1px solid lightcoral;
   }
 }
 
