@@ -4,6 +4,7 @@ import Circle from './components/Formas/Circle'
 import Rectangle from './components/Formas/Rectangle'
 import Square from './components/Formas/Square'
 import './App.scss'
+import { Animated } from './components/Formas/Animated'
 
 export const App = () => {
   return (
@@ -22,6 +23,9 @@ export const App = () => {
           <div className='container border-lightblue hov'>
             <Square className='skew'/>
           </div>
+          <Animated animated animation='disband'>
+            <Square />
+          </Animated>
         </div>
       </div>
     </section>

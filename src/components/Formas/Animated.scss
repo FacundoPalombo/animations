@@ -1,0 +1,16 @@
+.animated {
+  &-disband {
+    animation-name: disband;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-timing-function: ease-in;
+    @keyframes disband {
+      from {
+        opacity: 1;
+      }
+      to {
+        opacity: 0;
+      }
+    }
+  }
+}
