@@ -1,0 +1,26 @@
+.twitterLike {
+  width: 100px;
+  height: 100px;
+  background: url("https://static.platzi.com/media/files/corazon_b33c879a-0926-4897-a92f-495f0a44018c.png");
+  &.liked {
+    animation: like steps(28) .8s;
+    background-position: 100px;
+    @keyframes like {
+      0%{
+        background-position: 0 0;
+      }
+      100%{
+        background-position: right;
+      }
+    }
+  }
+  animation: rm-like steps(28) .6s;
+    @keyframes rm-like {
+      0%{
+        background-position: right;
+      }
+      100%{
+        background-position: 0 0 ;
+      }
+    }
+}
