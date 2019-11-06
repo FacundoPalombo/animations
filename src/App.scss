@@ -18,7 +18,7 @@
   justify-content: center;
   flex-direction: column;
   perspective: 300px;
-  perspective-origin: right;
+  perspective-origin: top;
 }
 
 .border{
@@ -53,7 +53,7 @@
 }
 
 .hov:hover .translate {
-  transform: translateY(100px);
+  transform: translateY(-100px);
   transform: translateZ(100px);
 }
 
